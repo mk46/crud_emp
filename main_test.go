@@ -269,7 +269,7 @@ func TestListEmployeePagination(t *testing.T) {
 	page_number = 12
 	_, err = listEmployee(page_number, per_page)
 
-	assert.Errorf(t, err, err.Error(), "requested record does not found. start>=records")
+	assert.Errorf(t, err, err.Error(), "requested record does not found. start>records")
 }
 
 func TestMain(m *testing.M) {

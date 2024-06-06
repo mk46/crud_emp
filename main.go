@@ -49,13 +49,8 @@ func ListEmployee(ctx *gin.Context) {
 
 	start := perpage * (page - 1)
 
-	// For first page allowing any numbers of employee per page
-	if page == 1 {
-		start = 0
-	}
-
-	if len(employees)-1 <= start {
-		ctx.JSON(http.StatusForbidden, "requested record does not found. start>=records")
+	if len(employees)-1 < start {
+		ctx.JSON(http.StatusForbidden, "requested record does not found. start>records")
 		return
 	}
 

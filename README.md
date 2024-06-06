@@ -1,4 +1,4 @@
-# GoCRUID App
+# GoCRUD App
 
 ## How to start Application:
 ```bash
